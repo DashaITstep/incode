@@ -1,3 +1,20 @@
-<p>
-  client-details works!
-</p>
+<div *ngIf="clientDetails != null" id="clientDetails">
+  <div id="image">
+    <img src="{{clientDetails['general'].avatar}}">
+  </div>
+  <div id="name">
+    <p >{{clientDetails['general'].firstName + ' ' + clientDetails['general'].lastName}}</p>
+  </div>
+  <div id="job">
+    <p >{{'(' + clientDetails['job'].company + ' - ' + clientDetails['job'].title + ')'}}</p>
+  </div>
+  <div id="contacts">
+    <p>{{clientDetails['contact'].email}}</p>
+    <p >{{clientDetails['contact'].phone}}</p>
+  </div>
+  <div id="address">
+    <p>{{clientDetails['address'].street}}</p>
+    <p>{{clientDetails['address'].city + ' ' + clientDetails['address'].zipCode}}</p>
+    <p>{{clientDetails['address'].country}}</p>
+  </div>
+</div>

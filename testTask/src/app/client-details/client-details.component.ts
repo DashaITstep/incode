@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Client} from "../shared/client";
 
 @Component({
   selector: 'app-client-details',
@@ -9,7 +10,8 @@ export class ClientDetailsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  @Input() clientDetails: Client;
+
+  ngOnInit() {}
 
 }

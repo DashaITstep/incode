@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+    public activeClient = null;
+
+    setActiveClient(client){
+        this.activeClient = client;
+        console.log(client);
+    }
 }

@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {GetClientsService} from "../shared/get-clients.service";
 import {Client} from "../shared/client";
-import {showWarningOnce} from "tslint/lib/error";
 
 @Component({
   selector: 'app-clients-list',
@@ -12,8 +11,8 @@ export class ClientsListComponent implements OnInit {
 
   constructor(private clientService: GetClientsService) { }
 
+  @Output() activeClient = new EventEmitter<Client>();
   public allClients: Client[] = [];
-  public activeClient: Client = null;
 
   ngOnInit() {
     this.getAllClients()
@@ -25,7 +24,7 @@ export class ClientsListComponent implements OnInit {
     });
   }
 
-  showDetails(){
-
+  showDetails(i){
+    this.activeClient.emit(this.allClients[i]);
   }
 }

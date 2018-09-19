@@ -2,11 +2,11 @@
     <div id="leftCont">
         <app-search></app-search>
         <div id="wrapper">
-            <app-clients-list></app-clients-list>
+            <app-clients-list (activeClient)="setActiveClient($event)"></app-clients-list>
         </div>
     </div>
     <div id="rightCont">
-        <app-client-details></app-client-details>
+        <app-client-details [clientDetails]="activeClient"></app-client-details>
     </div>
 </div>
 

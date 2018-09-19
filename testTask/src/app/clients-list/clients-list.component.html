@@ -1,4 +1,4 @@
-<div *ngFor="let client of allClients" class="client" (click)="showDetails()">
+<div *ngFor="let client of allClients; let i = index" class="client" (click)="showDetails(i)">
     <img src="{{client['general'].avatar}}">
     <p>{{client['general'].firstName + ' ' + client['general'].lastName}}</p>
 </div>

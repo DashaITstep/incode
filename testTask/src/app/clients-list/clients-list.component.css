@@ -16,6 +16,8 @@
 }
 .client img{
     margin: 0 15px;
+    height: 100%;
+    width: 25%;
 }
 .client p{
     font-size: 35px;
