@@ -1,0 +1,18 @@
+#mainCont{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+}
+#leftCont{
+    background: gray;
+    width: 35%;
+    height: 100%;
+}
+#rightCont{
+    background: yellow;
+    width: 65%;
+    height: 100%;
+}

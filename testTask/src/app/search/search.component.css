@@ -1,0 +1,9 @@
+#searchDiv{
+    height: 10%;
+    width: 100%;
+    font-size: 30px;
+    border: 2px solid gray;
+}
+#searchDiv:focus{
+    border: darkblue 2px solid;
+}
