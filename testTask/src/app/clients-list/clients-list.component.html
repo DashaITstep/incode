@@ -1,3 +1,4 @@
-<p>
-  clients-list works!
-</p>
+<div *ngFor="let client of allClients" class="client" (click)="showDetails()">
+    <img src="{{client['general'].avatar}}">
+    <p>{{client['general'].firstName + ' ' + client['general'].lastName}}</p>
+</div>

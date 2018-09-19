@@ -2,8 +2,9 @@
     height: 10%;
     width: 100%;
     font-size: 30px;
-    border: 2px solid gray;
+    padding: 5px;
+    border: none;
 }
 #searchDiv:focus{
-    border: darkblue 2px solid;
+    border: 2px solid #000000;
 }

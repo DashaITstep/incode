@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { ClientDetailsComponent } from './client-details/client-details.component';
 import { ClientsListComponent } from './clients-list/clients-list.component';
+import {GetClientsService} from "./shared/get-clients.service";
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -14,9 +17,9 @@ import { ClientsListComponent } from './clients-list/clients-list.component';
     ClientsListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HttpClientModule, FormsModule
   ],
-  providers: [],
+  providers: [GetClientsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

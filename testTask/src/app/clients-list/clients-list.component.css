@@ -1,0 +1,22 @@
+.client{
+    height: 20%;
+    width: 100%;
+    background: gainsboro;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    border-top: 2px solid yellow;
+    border-bottom: 2px solid yellow;
+}
+.client:hover{
+    background: black;
+    color: white;
+}
+.client img{
+    margin: 0 15px;
+}
+.client p{
+    font-size: 35px;
+}
