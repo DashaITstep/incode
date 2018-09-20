@@ -8,13 +8,15 @@ import { ClientsListComponent } from './clients-list/clients-list.component';
 import {GetClientsService} from "./shared/get-clients.service";
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import {FilterPipe} from "./shared/filter.pipe";
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     ClientDetailsComponent,
-    ClientsListComponent
+    ClientsListComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule

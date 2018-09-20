@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {GetClientsService} from "../shared/get-clients.service";
 import {Client} from "../shared/client";
 
@@ -12,6 +12,8 @@ export class ClientsListComponent implements OnInit {
   constructor(private clientService: GetClientsService) { }
 
   @Output() activeClient = new EventEmitter<Client>();
+  @Input() searchText: string;
+
   public allClients: Client[] = [];
 
   ngOnInit() {

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
+import {SearchComponent} from "./search/search.component";
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,10 @@ export class AppComponent {
 
     public activeClient = null;
 
+    @ViewChild(SearchComponent)
+    private searchComponent: SearchComponent;
+
     setActiveClient(client){
         this.activeClient = client;
-        console.log(client);
     }
 }

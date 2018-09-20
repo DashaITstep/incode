@@ -2,7 +2,7 @@
     <div id="leftCont">
         <app-search></app-search>
         <div id="wrapper">
-            <app-clients-list (activeClient)="setActiveClient($event)"></app-clients-list>
+            <app-clients-list (activeClient)="setActiveClient($event)" [searchText]="searchComponent.searchText"></app-clients-list>
         </div>
     </div>
     <div id="rightCont">

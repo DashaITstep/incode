@@ -8,8 +8,6 @@ import {Client} from "../shared/client";
 })
 export class ClientDetailsComponent implements OnInit {
 
-  constructor() { }
-
   @Input() clientDetails: Client;
 
   ngOnInit() {}

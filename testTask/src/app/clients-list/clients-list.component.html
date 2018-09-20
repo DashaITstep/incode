@@ -1,4 +1,4 @@
-<div *ngFor="let client of allClients; let i = index" class="client" (click)="showDetails(i)">
+<div *ngFor="let client of allClients | filter : searchText : 'general' : 'firstName' : 'lastName'; let i = index" (click)="showDetails(i)" class="client">
     <img src="{{client['general'].avatar}}">
     <p>{{client['general'].firstName + ' ' + client['general'].lastName}}</p>
 </div>
