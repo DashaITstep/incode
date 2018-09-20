@@ -27,6 +27,7 @@ export class ClientsListComponent implements OnInit {
   }
 
   showDetails(i){
-    this.activeClient.emit(this.allClients[i]);
+    var n = this.allClients.indexOf(i);
+    this.activeClient.emit(this.allClients[n]);
   }
 }
